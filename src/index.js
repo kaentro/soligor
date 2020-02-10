@@ -12,8 +12,10 @@
 
  Другими словами: функция должна возвращать в неизменном виде то, что поступает ей на вход
  */
-function returnFirstArgument() {
-}
+1.1 function returnFirstArgument(a) {}
+
+1.2 function returnFirstArgument(a) {
+ return a;
 
 /*
  Задание 2:
@@ -24,13 +26,37 @@ function returnFirstArgument() {
    sumWithDefaults(10, 20) вернет 30
    sumWithDefaults(2, 4) вернет 6
 
+
  2.1 *: Значение по умолчанию для второго аргумента должно быть равно 100
 
  Пример:
    sumWithDefaults(10) вернет 110
  */
-function sumWithDefaults(a, b) {
+2.1 function sumWithDefaults(10, 20) {
+  var result = a + b;
+
+  return result;
 }
+
+sumWithDefaults(10, 20);
+
+2.1*
+/////////// 1 вариант
+function SumWithDefaults(10, b=100) {
+  return a + b;
+}
+////////// 2 вариант ?
+function func1() {
+  var sumWithDefaults = 10;
+
+  return function() {
+    return sumWithDefaults + 100;
+  }
+}
+
+ var f = func1();
+
+ console.log(f)) 
 
 /*
  Задание 3:
@@ -41,6 +67,7 @@ function sumWithDefaults(a, b) {
    returnFnResult(() => 'привет') вернет 'привет'
  */
 function returnFnResult(fn) {
+return fn();
 }
 
 /*
@@ -56,7 +83,9 @@ function returnFnResult(fn) {
    console.log(f()); // выведет 12
    console.log(f()); // выведет 13
  */
-function returnCounter(number) {
+function returnCounter(number) 
+return function F() {
+return ++x;
 }
 
 /*
@@ -69,8 +98,12 @@ function returnCounter(number) {
    returnArgumentsArray(1, 2, 3) вернет [1, 2, 3]
  */
 function returnArgumentsArray() {
+ var result =[];
+for (var i=0; i < arguments.length; i++) {
+  result[i] = arguments[i];
+  }
+return result;
 }
-
 /*
  Задание 6 *:
 
